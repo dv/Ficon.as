@@ -19,12 +19,18 @@ Usage
 
 Import the class of the font you want to use:
 
-  import com.ficon.FontAwesome;
+```actionscript
+import com.ficon.FontAwesome;
+```
 
 Create a trophy icon:
 
-  var trophy:DisplayObject = FontAwesome.trophy();
+```actionscript
+var trophy:DisplayObject = FontAwesome.trophy();
+```
 
 Add the icon to the stage:
 
-  addChild(trophy);
+```actionscript
+addChild(trophy);
+```
