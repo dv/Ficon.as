@@ -38,20 +38,22 @@ addChild(trophy);
 UnicodeRange
 ============
 
-Embedded fonts are usually quite large, so to minimize wasted space Ficon includes a handy feature to check what glyphs you're actually using. This way you can specify to only embed those, reducing filesize dramatically since probably no one is using all the glyphs.
+Embedded fonts are usually quite large, so to minimize wasted space Ficon includes a handy feature to check what glyphs you're actually using. This way you can easily specify to only embed those, reducing filesize dramatically.
 
-By default ```Ficon.debug``` is set to true, which makes Ficon output all the characters you're using of any icon font to the console using *trace()*. You'll get output like this, every time an icon is created:
+Every time you create an icon, Ficon outputs the updated *unicodeRange* to the console using *trace*, for every font you're using:
 
 ```
 FontAwesome unicodeRange="U+f091,U+f002,U+f032,"
 ```
 
-This includes all the glyphs you've used in Ficon. Just replace the **unicodeRange** in the file where the font is embedded, e.g. **com.ficon.FontAwesome.as** with the generated one.
+This includes all the glyphs you've used in Ficon. Just replace the **unicodeRange** in the file where the font is embedded, e.g. **/com/ficon/FontAwesome.as** with the generated one.
+
+You can turn this off by setting ```Ficon.debug = false```.
 
 Details
 =======
 
-We're using the Flash Text Engine (FTE) instead of regular TextFields to render the icons because this allows us to embed the fonts using CFF ('embedAsCFF=true') which results in a 30% filesize decrease.
+We're using the Flash Text Engine (FTE) instead of regular TextFields to render the icons because this allows us to embed the fonts using CFF (```embedAsCFF=true```) which results in a 30% filesize decrease.
 
 Filesize
 --------
