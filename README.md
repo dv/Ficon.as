@@ -83,3 +83,27 @@ These are based on the change in filesize of a SWF compiled with debugging off, 
  - Font embedding not as CFF overhead: **52KB** (52058 bytes)
 
 Total overhead: **40KB** (40381 bytes).
+
+
+Todo
+====
+
+* Check and use the JSON files of Iconic
+
+
+Attribution
+===========
+
+This library contains some files of the following fonts. Thanks to their respective authors for providing their awesome work for free use!
+
+FontAwesome
+-----------
+
+[Font Awesome](http://fortawesome.github.com/Font-Awesome) by Davy Gandy, licensed under the [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
+
+Iconic
+------
+
+[Iconic](http://somerandomdude.com/work/iconic/) by P.J. Onori, licensed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/us).
+
+
