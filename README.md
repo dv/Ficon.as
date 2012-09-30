@@ -23,7 +23,7 @@ Import the class of the font you want to use:
 
 ```actionscript
 import com.ficon.FontAwesome;
-// or import com.fiction.IconicFill;
+// or import com.ficon.IconicFill;
 ```
 
 Create a trophy icon:
