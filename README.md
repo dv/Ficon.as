@@ -6,7 +6,9 @@ Using this library you can easily embed and use Font Icons into your Actionscrip
 Support
 =======
 
-Right now the only font available is FontAwesome.
+Right now we support the following icon fonts:
+- [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+- [Iconic](http://somerandomdude.com/work/iconic/) (both fill and stroke versions)
 
 Installation
 ============
@@ -21,6 +23,7 @@ Import the class of the font you want to use:
 
 ```actionscript
 import com.ficon.FontAwesome;
+# or import com.fiction.IconicFill;
 ```
 
 Create a trophy icon:
@@ -47,7 +50,7 @@ It will still be rendered super-sharp since the icons are vector-based.
 You can pass in options like so:
 
 ```actionscript
-addChild(FontAwesome.trophy({color: 0xFFFF00, fontSize:12}));
+addChild(IconicStroke.camera({color: 0xFFFF00, fontSize:12}));
 ```
 
 The options are set directly on the ```ElementFormat``` instance used. Check out the [documentation](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/engine/ElementFormat.html) for a list of possible settings.
@@ -79,16 +82,29 @@ These are based on the change in filesize of a SWF compiled with debugging off, 
 
 ### Font Awesome
  - FontAwesome.as overhead: **4KB** (4338 bytes)
- - Font embedding as CFF overhead: **36KB** (36043 bytes)
- - Font embedding not as CFF overhead: **52KB** (52058 bytes)
+ - Font size embedded as CFF: **36KB** (36043 bytes)
+ - Font size embedded as normal: **52KB** (52058 bytes)
 
-Total overhead: **40KB** (40381 bytes).
+Total max overhead: **40KB** (40381 bytes).
+
+### Iconic Fill
+ - IconicFill.as overhead: **3KB** (3235 bytes)
+ - Font size: **10KB** (10308 bytes)
+
+Total max overhead: **13KB** (13543 bytes)
+
+### Iconic Stroke
+ - IconicStroke.as overhead: **3KB** (3175 bytes)
+ - Font size: **10KB** (10740 bytes)
+
+Total max overhead: **13KB** (13815 bytes)
 
 
 Todo
 ====
 
 * Check and use the JSON files of Iconic
+* Add support for Entypo
 
 
 Attribution
