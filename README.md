@@ -35,6 +35,14 @@ Add the icon to the stage:
 addChild(trophy);
 ```
 
+You can pass in options like so:
+
+```actionscript
+addChild(FontAwesome.trophy({color: 0xFFFF00, fontSize:12}));
+```
+
+The options are set directly on the ```ElementFormat``` instance used. Check out the [documentation](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/engine/ElementFormat.html) for a list of possible settings.
+
 UnicodeRange
 ============
 

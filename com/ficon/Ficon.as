@@ -9,6 +9,13 @@ package com.ficon {
     public static function createIcon(fontName:String, character:String, options:Object = null):TextLine {
       var fd:FontDescription = new FontDescription(fontName, "normal", "normal", FontLookup.EMBEDDED_CFF); 
       var format:ElementFormat = new ElementFormat(fd, 60);
+
+      if (options) {
+        for (var property:String in options) {
+          format[property] = options[property];
+        }
+      }
+
       var textElement:TextElement = new TextElement(character, format);
       var textBlock:TextBlock = new TextBlock();
       textBlock.content = textElement; 
