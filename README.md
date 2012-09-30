@@ -112,8 +112,8 @@ Attribution
 
 This library contains some files of the following fonts. Thanks to their respective authors for providing their awesome work for free use!
 
-FontAwesome
------------
+Font Awesome
+------------
 
 [Font Awesome](http://fortawesome.github.com/Font-Awesome) by Davy Gandy, licensed under the [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
