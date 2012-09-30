@@ -35,6 +35,15 @@ Add the icon to the stage:
 addChild(trophy);
 ```
 
+Size it to your wishes:
+
+```actionscript
+trophy.width = 100;
+trophy.height = 50;
+```
+
+It will still be rendered super-sharp since the icons are vector-based.
+
 You can pass in options like so:
 
 ```actionscript
