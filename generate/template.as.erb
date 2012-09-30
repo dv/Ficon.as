@@ -1,0 +1,18 @@
+package com.ficon {
+  import com.ficon.Ficon;
+  import flash.text.engine.TextLine;
+
+  public class FontAwesome extends Ficon {
+    [Embed(source="<%= data["source"] %>", fontName="<%= data["font_name"] %>", mimeType="<%= data["mime_type"] %>",
+    embedAsCFF="true",  fontStyle="normal", fontWeight="normal", unicodeRange="<%= data["unicode_range"] %>")]
+    private static var asset:Class;
+
+    private static var fontName:String = "<%= data["font_name"] %>";
+
+    <% data["glyphs"].each do |name, code| %>
+    public static function <%= name.gsub("-", "_") %>(options:Object = null):TextLine {
+      return createIcon(fontName, "<%= code.sub("\\f", "\\uf") %>", options);
+    }
+    <% end %>
+  }
+}
