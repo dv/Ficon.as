@@ -9,6 +9,7 @@ Support
 Right now we support the following icon fonts:
 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 - [Iconic](http://somerandomdude.com/work/iconic/) (both fill and stroke versions)
+- [Entypo](http://www.entypo.com/)
 
 Installation
 ============
@@ -99,12 +100,17 @@ Total max overhead: **13KB** (13543 bytes)
 
 Total max overhead: **13KB** (13815 bytes)
 
+### Entypo
+ - Entypo.as overhead: **2.5KB** (2451 bytes)
+ - Font size: **14KB** (14017 bytes)
+
+Total max overhead: **16.5KB** (16468 bytes)
+
 
 Todo
 ====
 
 * Check and use the JSON files of Iconic
-* Add support for Entypo
 
 
 Attribution
@@ -121,5 +127,10 @@ Iconic
 ------
 
 [Iconic](http://somerandomdude.com/work/iconic/) by P.J. Onori, licensed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/us).
+
+Entypo
+------
+
+[Entypo](http://www.entypo.com/) by Daniel Bruce, licensed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).
 
 
