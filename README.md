@@ -76,7 +76,7 @@ You can turn this off by setting ```Ficon.debug = false```.
 Details
 =======
 
-We're using the Flash Text Engine (FTE) instead of regular TextFields to render the icons because this allows us to embed the fonts using CFF (```embedAsCFF=true```) which results in a 30% filesize decrease.
+We're using the Flash Text Engine (FTE) instead of regular TextFields to render the icons because this allows us to embed the fonts using CFF (```embedAsCFF=true```) which results in a 30% filesize reduction.
 
 Filesize
 --------
