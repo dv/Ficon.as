@@ -56,6 +56,8 @@ addChild(IconicStroke.camera({color: 0xFFFF00, fontSize:12}));
 
 The options are set directly on the ```ElementFormat``` instance used. Check out the [documentation](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/engine/ElementFormat.html) for a list of possible settings.
 
+The returned object is a Sprite, containing one child, a TextLine. Returning the TextLine object directly would be annoying if you wanted to position the element, since it calculates **y** using the text baseline instead of the point of the highest character, as you'd intuitively expect. The Sprite container makes sure that you can easily position it by setting x and y like you're used to.
+
 UnicodeRange
 ============
 

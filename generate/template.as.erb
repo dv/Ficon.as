@@ -1,6 +1,6 @@
 package com.ficon {
   import com.ficon.Ficon;
-  import flash.text.engine.TextLine;
+  import flash.display.Sprite;
 
   public class <%= title %> extends Ficon {
     [Embed(source="<%= data["source"] %>", fontName="<%= data["font_name"] %>", mimeType="<%= data["mime_type"] %>",
@@ -10,7 +10,7 @@ package com.ficon {
     private static var fontName:String = "<%= data["font_name"] %>";
 
     <% data["glyphs"].each do |name, code| %>
-    public static function <%= name.gsub("-", "_") %>(options:Object = null):TextLine {
+    public static function <%= name.gsub("-", "_") %>(options:Object = null):Sprite {
       return createIcon(fontName, "<%= code.sub("\\", "\\u") %>", options);
     }
     <% end %>
