@@ -39,11 +39,11 @@ Add the icon to the stage:
 addChild(trophy);
 ```
 
-Size it to your wishes:
+Size and position it to your wishes:
 
 ```actionscript
+trophy.y = 100;
 trophy.width = 100;
-trophy.height = 50;
 ```
 
 It will still be rendered super-sharp since the icons are vector-based.
@@ -56,7 +56,17 @@ addChild(IconicStroke.camera({color: 0xFFFF00, fontSize:12}));
 
 The options are set directly on the ```ElementFormat``` instance used. Check out the [documentation](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/engine/ElementFormat.html) for a list of possible settings.
 
-The returned object is a Sprite, containing one child, a TextLine. Returning the TextLine object directly would be annoying if you wanted to position the element, since it calculates **y** using the text baseline instead of the point of the highest character, as you'd intuitively expect. The Sprite container makes sure that you can easily position it by setting x and y like you're used to.
+The returned object is a FiconSprite, a descendant of Sprite. FiconSprite keeps the proportional width and height of the icon locked, so you cannot distort it. If you'd like to set width and height independently, set ```proportionalScaling``` to false:
+
+```actionscript
+trophy.width = 50;
+trophy.height = 50;
+trace(trophy.width); // Will return something like '30'
+
+trophy.proportionalScaling = false;
+trophy.width = 50;
+trace(trophy.width, trophy.height) // Will return '50, 50'
+```
 
 UnicodeRange
 ============
@@ -77,6 +87,8 @@ Details
 =======
 
 We're using the Flash Text Engine (FTE) instead of regular TextFields to render the icons because this allows us to embed the fonts using CFF (```embedAsCFF=true```) which results in a 30% filesize reduction.
+
+FiconSprite contains one child, a TextLine containing the glyph. Returning the TextLine object directly would be annoying if you wanted to position the element, since it calculates **y** using the text baseline instead of the point of the highest character, as you'd intuitively expect. IconSprite makes sure that positioning and sizing happens intuitively. If you'd like access to the TextLine, you can always get the first child of the returned FiconSprite object.
 
 Filesize
 --------

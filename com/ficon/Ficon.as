@@ -1,15 +1,15 @@
 package com.ficon {
   import flash.utils.*;
-  import flash.display.Sprite;
+  import com.ficon.FiconSprite;
   import flash.text.engine.*;
 
   public class Ficon {
     private static var glyphsUsed:Object = {};
     public static var debug:Boolean = true;
 
-    public static function createIcon(fontName:String, character:String, options:Object = null):Sprite {
+    public static function createIcon(fontName:String, character:String, options:Object = null):FiconSprite {
       var fd:FontDescription = new FontDescription(fontName, "normal", "normal", FontLookup.EMBEDDED_CFF); 
-      var format:ElementFormat = new ElementFormat(fd, 60);
+      var format:ElementFormat = new ElementFormat(fd, 1);
 
       if (options) {
         for (var property:String in options) {
@@ -22,12 +22,6 @@ package com.ficon {
       textBlock.content = textElement; 
          
       var icon:TextLine = textBlock.createTextLine();
-      var container:Sprite = new Sprite;
-
-      icon.x = 0;
-      icon.y = icon.ascent;
-      container.addChild(icon);
-
 
       if (debug) {
         if (!glyphsUsed[fontName])
@@ -37,7 +31,7 @@ package com.ficon {
         outputGlyphsUsed();
       }
 
-      return container;
+      return new FiconSprite(icon);
     }
 
     private static function outputGlyphsUsed():void {
